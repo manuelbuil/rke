@@ -21,6 +21,7 @@ const (
 )
 
 func StartUpDindContainer(ctx context.Context, dindAddress, dindNetwork, dindStorageDriver, dindDNS string) (string, error) {
+	logrus.Info("Starting DinD Container!")
 	cli, err := client.NewEnvClient()
 	if err != nil {
 		return "", err
